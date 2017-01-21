@@ -1,0 +1,12 @@
+List component html
+<div class="list-container">
+    <div class="list-item"
+         ng-repeat="item in $ctrl.items"
+         ng-class="{'active': $ctrl.selectedItem.id === item.id}"
+         ng-click="$ctrl.onItemClick({id: item.id})">
+        list item
+    </div>
+</div>
+<div>
+    <button ng-click="$ctrl.reloadItems()">Reload items</button>
+</div>
