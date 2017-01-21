@@ -3,7 +3,7 @@ import listModuleName from './list';
 import detailsModuleName from './details';
 import ordersServiceModuleName from './services/orders';
 
-import appComponent from './app.cmp.js';
+import appComponent from './app.cmp.ts';
 import './app.less';
 
 export default angular.module('app.marius', [
