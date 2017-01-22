@@ -8,22 +8,25 @@ module.exports = {
         filename: "bundle.js"
     },
     resolve: {
-        extensions: ['', '.ts', '.js', '.json']
+        extensions: ['.ts', '.js', '.json']
     },
     devtool: 'source-map',
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.(ts|js)$/,
                 exclude: /(node_modules|bower_components)/,
-                loader: 'awesome-typescript-loader'
+                use: 'awesome-typescript-loader'
             }, {
                 test: /\.less$/,
-                loader: ExtractTextPlugin.extract("style-loader", "css-loader!less-loader")
+                loader: ExtractTextPlugin.extract({
+                    fallbackLoader: "style-loader",
+                    loader: ["css-loader", "less-loader"]
+                })
             }, {
                 test: /\.html$/,
-                loader: 'html'
+                use: 'raw-loader'
             }
         ]
     },
@@ -31,6 +34,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new ExtractTextPlugin("[name].css")
+        new ExtractTextPlugin({
+            filename: "[name].css"
+        })
     ]
 };

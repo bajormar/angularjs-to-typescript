@@ -14,7 +14,7 @@ export default class ListComponentController implements ng.IComponentController 
     }
 
     $onChanges(onChangesObj: ng.IOnChangesObject) {
-        if(onChangesObj['items'].isFirstChange()) {
+        if(onChangesObj['items'] && onChangesObj['items'].isFirstChange()) {
             this.items = [];
         }
     }
