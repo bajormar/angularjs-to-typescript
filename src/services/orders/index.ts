@@ -1,2 +1,2 @@
-import moduleName from './orders.mod.ts';
+import moduleName from './orders.mod';
 export default moduleName;

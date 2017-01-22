@@ -1,2 +1,2 @@
-import moduleName from './list.mod.ts';
+import moduleName from './list.mod';
 export default moduleName;

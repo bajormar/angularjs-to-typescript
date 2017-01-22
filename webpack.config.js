@@ -8,14 +8,14 @@ module.exports = {
         filename: "bundle.js"
     },
     resolve: {
-        extensions: ['.ts', '.js']
+        extensions: ['', '.ts', '.js', '.json']
     },
     devtool: 'source-map',
 
     module: {
         loaders: [
             {
-                test: /\.ts$/,
+                test: /\.(ts|js)$/,
                 exclude: /(node_modules|bower_components)/,
                 loader: 'awesome-typescript-loader'
             }, {
@@ -31,5 +31,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
-        new ExtractTextPlugin("[name].css")]
+        new ExtractTextPlugin("[name].css")
+    ]
 };

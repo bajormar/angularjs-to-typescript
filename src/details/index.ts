@@ -1,2 +1,2 @@
-import moduleName from './details.mod.ts';
+import moduleName from './details.mod';
 export default moduleName;

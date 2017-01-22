@@ -1,8 +1,8 @@
-import angular from 'angular';
+import * as angular from 'angular';
 
-import detailsComponent from './details.cmp.ts';
+import DetailsComponent from './details.cmp';
 import './details.less';
 
 export default angular.module('app.marius.details', [
 
-]).component('mariusListDetails', detailsComponent).name;
+]).component('mariusListDetails', new DetailsComponent()).name;
