@@ -1,3 +1,3 @@
-export default class Order {
+export class Order {
     id: number;
 }

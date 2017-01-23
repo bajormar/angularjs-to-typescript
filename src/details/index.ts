@@ -1,2 +1,1 @@
-import moduleName from './details.mod';
-export default moduleName;
+export * from './details.module';
